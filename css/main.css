@@ -1,0 +1,287 @@
+/*-------------------------------  Start Variables ------------------------------- */
+:root {
+  --icon-color: #16b6df;
+  --bg-color: #323a49;
+  --card-color: rgba(0, 0, 0, 0.4);
+  --quote-color: #fff;
+  --title-color: #fff;
+  --btn-color: #16b6df;
+  --author-color: #16b6df;
+  --neon-blue:#6499E9;
+}
+/*-------------------------------  End Variables ------------------------------- */
+/*-------------------------------  Start Global Rules ------------------------------- */
+*,
+*::after,
+*::before {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  width: 100%;
+  height: 100%;
+}
+img {
+  display: block;
+  width: 100%;
+}
+a {
+  color: inherit;
+}
+.title-font {
+  font-family: "Raleway", sans-serif;
+}
+/*-------------------------------  End Global Rules ------------------------------- */
+/*-------------------------------  Start Header ------------------------------- */
+header {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../images/high-angle-businessman-with-laptop-office.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card .container {
+  background-color: var(--card-color) !important;
+  border-radius: 10px;
+  width: 100%;
+  height: 50%;
+  padding: 15px 50px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s;
+}
+.image{
+  width: 190px;
+  height: 90px;
+  position: absolute;
+  left: 53%;
+  top: -43%;
+  transform: translate(-50%, 50%);
+}
+.image img{
+  max-width: 80%;
+  height: 150%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.post {
+  padding: 40px 20px;
+  margin-top: 50px;
+}
+.card .quote-content {
+  color: var(--quote-color);
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-family: "Lora", serif;
+  text-align: center;
+  position: relative;
+}
+.card .author {
+  font-family: 'Whisper', cursive;
+  color: var(--author-color);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  padding-left: 20px;
+}
+.card .author i{
+  font-size: 0.6rem;
+}
+.quote-left {
+  color: #16b6df;
+  font-size: 2rem;
+  position: absolute;
+  left: 5%;
+  top: 30%;
+}
+.quote-right {
+  color: #16b6df;
+  font-size: 2rem;
+  position: absolute;
+  right: 5%;
+  bottom: 20%;
+}
+.card .gnBtn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--btn-color);
+  border: 2px solid var(--btn-color);
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.card .gnBtn i{
+  color: #fff;
+}
+.card .gnBtn:hover{
+  box-shadow: 0 0 22px 0px var(--neon-blue);
+}
+.icon ul{
+  display: flex;
+  padding-right: 80px;
+}
+ul li{
+  position: relative;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: rgba(255, 255, 255, 0.6) 1px solid;
+  border-radius: 50%;
+  transition: all 0.5s;
+  margin-inline: 5px;
+  cursor: pointer;
+}
+ul li:hover i{
+  color: var(--icon-color);
+}
+ul li:hover{
+  border: var(--icon-color) 1px solid;
+}
+ul li i {
+  transition: all 0.3s;
+  color: #fff;
+}
+.about{
+  display: flex;
+  justify-content: space-between;
+}
+/*-------------------------------  End Header  ------------------------------- */
+/*-------------------------------  Start Media-Queries ------------------------------- */
+@media (max-width: 767.98px) {
+  .card .container {
+    width: 90%;
+  }
+  .card .quote-content {
+    font-size: 1rem;
+  }
+  .card .author {
+    font-size: 1rem;
+  }
+  .quote-left {
+    font-size: 1.8rem;
+  }
+  .quote-right {
+    font-size: 1.8rem;
+  }
+  .image{
+    width: 150px;
+    height: 80px;
+    left: 52%;
+    top: -45%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .card .container {
+    width: 80%;
+  }
+  .post {
+    padding: 5px 20px;
+  }
+  .image{
+    width: 130px;
+    height: 60px;
+    left: 52%;
+    top: -30%;
+  }
+  .card .quote-content {  
+    font-size: 0.8rem;
+  }
+  .card .author {
+    font-size: 0.8rem;
+  }
+  .quote-left {
+    font-size: 1rem;
+  }
+  .quote-right {
+    font-size: 1rem;
+    right: 5%;
+    bottom: 30%;
+  }
+  .icon ul{
+    padding-block: 20px;
+  }
+  ul li{
+    width: 25px;
+    height: 25px;
+  }
+  ul li i {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 460px) {
+  .card .container{
+    width: 85%;
+  }
+  .image{
+    top: -35%;
+    transform: translate(-50%, 50%);
+  }
+  .post {
+    padding: 25px 0px;
+    margin-top: 20px;
+  }
+  .card .quote-content {  
+    font-size: 0.8rem;
+  }
+  .card .author {
+    font-size: 0.6rem;
+    padding-left: 35px;
+  }
+  .card .author i{
+    font-size: 0.3rem;
+  }
+  .quote-left {
+    font-size: 1rem;
+    left: 5%;
+    top: 20%;
+  }
+  .quote-right {
+    font-size: 1rem;
+    right: 5%;
+    bottom: 35%;
+  }
+  .icon ul{
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 0px;
+
+  }
+  ul li{
+    position: relative;
+    width: 20px;
+    height: 20px;
+  }
+  ul li i {
+    font-size: 0.6rem;
+  }
+  .about{
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+  }
+}
+/*-------------------------------  End Media-Queries ------------------------------- */
